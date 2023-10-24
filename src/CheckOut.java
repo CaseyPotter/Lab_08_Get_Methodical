@@ -8,14 +8,14 @@ import java.util.Scanner;
             boolean moreItems = false;
 
             do {
-                double itemPrice = 0.0;
-                itemPrice = SafeInput.getRangedDouble(in, "What is the price of your item?", 00.50, 10.00);
+                double price = 0.0;
+                price = SafeInput.getRangedDouble(in, "What is the price of your item?", 00.50, 10.00);
                 moreItems = SafeInput.getYNConfirm(in, "Do you have more items? [Y or N]");
                 if (moreItems) {
-                    totalCost = itemPrice + SafeInput.getRangedDouble(in, "What is the price of your item?", 00.50, 10.00);
+                    totalCost = price + SafeInput.getRangedDouble(in, "What is the price of your item?", 00.50, 10.00);
                     moreItems = SafeInput.getYNConfirm(in, "Do you have more items? [Y or N]");
                 } else {
-                    totalCost = itemPrice;
+                    totalCost = price;
                 }
             } while (moreItems);
             System.out.printf("\nYour total is: $%.2f%n", totalCost);

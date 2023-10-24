@@ -6,7 +6,7 @@ import java.util.Scanner;
 
             String SSN;
             String mNumber;
-            String menuChoice;
+            String menu;
 
             SSN = SafeInput.getRegExString(in, "Enter SSN", "\\d{3}-\\d{2}-\\d{4}");
             System.out.println("Your SSN is " + SSN);
@@ -14,8 +14,8 @@ import java.util.Scanner;
             mNumber = SafeInput.getRegExString(in, "Enter your M number", "(M|m)\\d{5}");
             System.out.println("Your M number is " + mNumber);
 
-            menuChoice = SafeInput.getRegExString(in, "Open, Save, View, or Quit [O, S, V, Q] ", "[OoSsVvQq]");
-            switch (menuChoice) {
+            menu = SafeInput.getRegExString(in, "Open, Save, View, or Quit [O, S, V, Q] ", "[OoSsVvQq]");
+            switch (menu) {
                 case "o": case "O":
                     System.out.println("Open");
                     break;
